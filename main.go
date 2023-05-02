@@ -167,3 +167,5 @@ func serveResource(w http.ResponseWriter, req *http.Request) {
 }
 
 //--------------------------------------------------------------
+
+// Login validation function

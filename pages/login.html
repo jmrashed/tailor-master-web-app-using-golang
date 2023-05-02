@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  {{template "_head.html" .}}
+
+  <body>
+    <div class="container">
+      {{template "_mainmenu.html"}}
+
+      <!--start section login (html5, bootstrap 5.0, and custom css with carry "login-section" css)  -->
+      <!-- start section login -->
+      <section class="login-section">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title text-center">Login</h5>
+                  <form>
+                    <div class="mb-3">
+                      <label for="username" class="form-label">Username</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="username"
+                        name="username"
+                      />
+                    </div>
+                    <div class="mb-3">
+                      <label for="password" class="form-label">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        name="password"
+                      />
+                    </div>
+                    <div class="d-grid gap-2">
+                      <button type="submit" class="btn btn-primary">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                  <div
+                    class="d-flex justify-content-between align-items-center mt-3"
+                  >
+                    <a href="#" class="text-decoration-none"
+                      >Forgot Password?</a
+                    >
+                    <a href="#" class="text-decoration-none">Sign Up</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end section login  -->
+      <!-- end section login  -->
+
+      {{template "_foot.html"}}
+    </div>
+    <!-- /container -->
+
+    <script>
+      function validateLoginForm() {
+        // Get the form input values
+        var username = document.getElementById("username").value.trim();
+        var password = document.getElementById("password").value.trim();
+
+        // Check if the username field is empty
+        if (username === "") {
+          alert("Please enter a username");
+          return false;
+        }
+
+        // Check if the password field is empty
+        if (password === "") {
+          alert("Please enter a password");
+          return false;
+        }
+
+        // If all validations pass, return true to submit the form
+        return true;
+      }
+
+      // Attach the form validation function to the form submit event
+      document.querySelector("form").addEventListener("submit", function (e) {
+        if (!validateLoginForm()) {
+          e.preventDefault(); // Prevent the form from submitting
+        }
+      });
+    </script>
+  </body>
+</html>
