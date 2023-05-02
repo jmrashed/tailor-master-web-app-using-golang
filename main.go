@@ -3,6 +3,7 @@ package main
 import (
 	"bufio"
 	"fmt"
+	"io/ioutil"
 	"log"
 	"net/http"
 	"os"
@@ -10,10 +11,63 @@ import (
 	"text/template"
 
 	"github.com/gorilla/mux"
+	"gopkg.in/yaml.v2"
 )
+
+type Config struct {
+	Database struct {
+		Host     string `yaml:"host"`
+		Port     string `yaml:"port"`
+		User     string `yaml:"user"`
+		Password string `yaml:"password"`
+		Dbname   string `yaml:"dbname"`
+	} `yaml:"database"`
+}
+
+func checkConfig() {
+	// Load the configuration file
+	yamlFile, err := ioutil.ReadFile("config.yaml")
+	if err != nil {
+		log.Fatalf("Failed to read the configuration file: %v", err)
+	}
+
+	// Parse the configuration file
+	var config Config
+	err = yaml.Unmarshal(yamlFile, &config)
+	if err != nil {
+		log.Fatalf("Failed to parse the configuration file: %v", err)
+	}
+
+	// Print the database config
+	fmt.Printf("Database config: %+v\n", config.Database)
+}
+func createSqlFile() {
+
+	checkConfig()
+	// Define the SQL statements
+	statements := `
+		CREATE TABLE users (
+			id SERIAL PRIMARY KEY,
+			username VARCHAR(255) UNIQUE NOT NULL,
+			email VARCHAR(255) UNIQUE NOT NULL,
+			password_hash VARCHAR(255) NOT NULL,
+			created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
+		);`
+
+	// Write the SQL statements to a file
+	// C:\laragon\www\web-app-template-master\db\migrations
+	err := ioutil.WriteFile("users.sql", []byte(statements), 0644)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	fmt.Println("SQL file created successfully!")
+}
 
 // main is the entry point for the application.
 func main() {
+	createSqlFile()
+
 	// start the web server
 	serveWeb()
 }

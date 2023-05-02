@@ -1,0 +1,15 @@
+app:
+  name: TailorMaster
+  version: "1.0.0"
+  port: 8080
+
+database:
+  host: localhost
+  port: 5432
+  user: root
+  password: password
+  dbname: tailor_master
+
+logging:
+  level: info
+  file: /var/log/myapp.log
