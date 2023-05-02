@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>404 - Page not found</title>
+    <!-- Bootstrap 5 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" integrity="sha512-AZ5imVJDXI4H4cL4EgKvcJ9e7RElOTeyn+MB/kbJwFgRjKkxsGpsbrH+20n3JalK9YtoGhPjxKx0xn0DDsOZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Custom CSS -->
+    <style>
+      /* Center content vertically */
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      /* Add padding to top and bottom of container */
+      .container {
+        padding-top: 100px;
+        padding-bottom: 100px;
+      }
+      /* Increase font size of heading */
+      h1 {
+        font-size: 6rem;
+      }
+      /* Add margin to bottom of paragraph */
+      p {
+        margin-bottom: 2rem;
+      }
+
+      body {
+        background-color: #7d3cff;
+        animation: background-animation 5s ease-in-out infinite alternate;
+      }
+
+      h1 {
+        color: white;
+        font-size: 10rem;
+        margin-top: 20%;
+        text-align: center;
+      }
+
+      p {
+        color: white;
+        font-size: 2rem;
+        margin-top: 2%;
+        text-align: center;
+      }
+
+      @keyframes background-animation {
+        0% {
+          background-color: #7d3cff;
+        }
+        50% {
+          background-color: #ff8c00;
+        }
+        100% {
+          background-color: #7d3cff;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container text-center">
+      <h1 class="display-1">404</h1>
+      <p class="lead">Page not found</p>
+      <a class="btn btn-primary" href="/">Return to Home</a>
+    </div>
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js" integrity="sha512-dG0oH2Q+y8NNJf0wvA0rj/WCDdAdpv8z9gIHkNTiEgHgzTcuKpT1IpgbRvazScsIkKj1zq3WPla3Oe6/FOeh6w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  </body>
+</html>

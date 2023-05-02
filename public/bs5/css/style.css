@@ -1,0 +1,343 @@
+/* displaying counts for visitors, happy customers, running orders, and complete orders */
+.counts {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+}
+
+.count-item {
+  text-align: center;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.count-item:hover {
+  transform: translateY(-10px);
+}
+
+.count-item i {
+  font-size: 48px;
+  color: #007bff;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.count-number {
+  font-size: 36px;
+  font-weight: bold;
+  color: #212529;
+  margin-bottom: 10px;
+}
+
+.count-description {
+  font-size: 18px;
+  color: #6c757d;
+  text-transform: uppercase;
+}
+
+
+/* style the carousel */
+.carousel-item {
+    height: 500px;
+    background-color: #f8f9fa;
+    position: relative;
+  }
+  
+  .carousel-item img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+  }
+  
+  .carousel-caption {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #ffffff;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  .carousel-caption h5 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .carousel-caption p {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .carousel-caption button {
+    font-size: 24px;
+    padding: 12px 40px;
+    border-radius: 30px;
+    background-color: #007bff;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .carousel-caption button:hover {
+    background-color: #0062cc;
+    transform: scale(1.1);
+  }
+  
+
+  /* start Product showcase section */
+  /* Center the section title */
+#product-showcase .section-title {
+    text-align: center;
+  }
+  
+  /* Add a background color and padding to the cards */
+  #product-showcase .card {
+    background-color: #fff;
+    padding: 20px;
+  }
+  
+  /* Style the card titles */
+  #product-showcase .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the card text */
+  #product-showcase .card-text {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the "Shop Now" buttons */
+  #product-showcase .btn-primary {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  
+  /* Change the color of the "Shop Now" button on hover */
+  #product-showcase .btn-primary:hover {
+    background-color: #3E8E41;
+    border-color: #3E8E41;
+  }
+  
+  /* end Product showcase section */
+
+
+  /* start footer css  */
+  /* Custom CSS for Footer */
+.footer {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .footer h5 {
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 20px;
+  }
+  
+  .footer ul li a {
+    color: #6c757d;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .footer ul li a:hover {
+    color: #212529;
+  }
+  
+  .footer ul li i {
+    margin-right: 10px;
+  }
+  
+  .footer .text-muted {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #6c757d;
+  }
+  
+  @media (max-width: 767px) {
+    .footer {
+      padding: 30px 0;
+    }
+  }
+  
+  /* end footer css  */
+
+  /* start about us section  */
+  #about {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+  }
+  
+  #about h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #212529;
+  }
+  
+  #about p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6c757d;
+  }
+  
+  #about ul li {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6c757d;
+  }
+  
+  #about .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    font-weight: bold;
+  }
+  
+  #about .btn-primary:hover {
+    background-color: #0062cc;
+    border-color: #0062cc;
+  }
+  
+  @media (max-width: 768px) {
+    #about h2 {
+      font-size: 2rem;
+    }
+    
+    #about p {
+      font-size: 1rem;
+    }
+    
+    #about ul li {
+      font-size: 1rem;
+    }
+  }
+  
+  /* end about us section  */
+
+
+  .navbar-brand {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333; /* change the color to your liking */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25); /* add a subtle text shadow */
+  }
+  
+
+  #mission-vision {
+    background-color: #f8f9fa;
+  }
+  
+  #mission-vision h2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #343a40;
+  }
+  
+  #mission-vision p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #6c757d;
+  }
+  
+  #mission-vision .col-md-6:first-child {
+    border-right: 1px solid #dee2e6;
+  }
+  
+  @media screen and (max-width: 768px) {
+    #mission-vision .col-md-6 {
+      border: none;
+      padding: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  
+
+  /* why choose us  */
+  #why-choose-us {
+    background-color: #f8f9fa;
+  }
+  
+  .card {
+    border: none;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+  }
+  
+  .fa-4x {
+    font-size: 4rem;
+  }
+  
+  @media (max-width: 767px) {
+    .fa-4x {
+      font-size: 2.5rem;
+    }
+  }
+  
+  /* why choose us  */
+
+
+  /* constact us  */
+  .contact-us {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+  }
+  
+  .contact-us h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+  
+  .contact-us p {
+    font-size: 1.25rem;
+    line-height: 1.5;
+    margin-bottom: 40px;
+  }
+  
+  .contact-us .form-group label {
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .contact-us .form-control {
+    margin-bottom: 20px;
+  }
+  
+  .contact-us button[type="submit"] {
+    background-color: #1c2237;
+    border-color: #1c2237;
+    font-weight: 600;
+  }
+  
+  .contact-us button[type="submit"]:hover {
+    background-color: #0d1122;
+    border-color: #0d1122;
+  }
+  
